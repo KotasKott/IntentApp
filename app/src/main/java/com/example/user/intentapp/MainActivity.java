@@ -36,7 +36,11 @@ public class MainActivity extends AppCompatActivity {
         btnOnlyOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    constraintLayout.setBackgroundColor(Color.BLUE);
+               /*     constraintLayout.setBackgroundColor(Color.BLUE);*/
+
+               Intent intent = new Intent();
+               intent.setAction("root.com.SecondActivity");
+               MainActivity.this.startActivity(intent);
                 }
 
             });
