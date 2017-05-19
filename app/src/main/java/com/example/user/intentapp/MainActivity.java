@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnOnlyOne;
     ConstraintLayout constraintLayout;
+    public static final String KEY = "KEY";
 
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
@@ -38,9 +39,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                /*     constraintLayout.setBackgroundColor(Color.BLUE);*/
 
-               Intent intent = new Intent();
-               intent.setAction("root.com.SecondActivity");
-               MainActivity.this.startActivity(intent);
+               Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+               intent.setAction("android.intent.action.SEND");
+               intent.putExtra(KEY, "test string");
+               startActivity(intent);
                 }
 
             });

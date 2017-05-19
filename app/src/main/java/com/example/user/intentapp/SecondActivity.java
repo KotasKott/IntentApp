@@ -15,7 +15,7 @@ public class SecondActivity extends Activity {
         setContentView(R.layout.activity_second);
 
         TextView textView = (TextView) findViewById(R.id.textView);
-        setResult(RESULT_OK);
+        textView.setText(getIntent().getStringExtra(MainActivity.KEY));
     }
 
 
