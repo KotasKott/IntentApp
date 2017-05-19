@@ -16,6 +16,7 @@ public class SecondActivity extends Activity {
 
         TextView textView = (TextView) findViewById(R.id.textView);
         textView.setText(getIntent().getStringExtra(MainActivity.KEY));
+        textView.setTextColor(getIntent().getIntExtra(MainActivity.KEYCOLOR, 0));
     }
 
 

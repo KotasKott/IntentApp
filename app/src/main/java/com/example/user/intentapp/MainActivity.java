@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnOnlyOne;
     ConstraintLayout constraintLayout;
     public static final String KEY = "KEY";
+    public static final String KEYCOLOR = "KEYCOLOR";
 
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                intent.setAction("android.intent.action.SEND");
                intent.putExtra(KEY, "test string");
+               intent.putExtra(KEYCOLOR, Color.BLUE);
                startActivity(intent);
                 }
 
